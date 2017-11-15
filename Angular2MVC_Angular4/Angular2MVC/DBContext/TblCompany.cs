@@ -12,17 +12,18 @@ namespace Angular2MVC.DBContext
     using System;
     using System.Collections.Generic;
     
-    public partial class TblUser
+    public partial class TblCompany
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Gender { get; set; }
-        public string Role { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public bool IsLocked { get; set; }
-        public string SecurityAnswer { get; set; }
-        public Nullable<int> CompanyId { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Owner { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
+        public string DUNS { get; set; }
+        public string CompanyType { get; set; }
     }
 }
