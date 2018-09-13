@@ -1,21 +1,27 @@
 ﻿using Angular2MVC.DBContext;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace Angular2MVC.Controllers
 {
     public class UserAPIController : BaseAPIController
     {
+      
         public HttpResponseMessage Get()
         {
             return ToJson(UserDB.TblUsers.AsEnumerable());
         }
-
+     
        public HttpResponseMessage Post([FromBody]TblUser value)
         {
-            UserDB.TblUsers.Add(value);             
+            //value.Password=Http
+            UserDB.TblUsers.Add(value);
+
             return ToJson(UserDB.SaveChanges());
         }
 
